@@ -25,6 +25,9 @@ function ProductCard(props) {
           <h5 className="product-title">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, nam.
           </h5>
+          <p className={`description ${grid === 12 ? "d-block" : "d-none"}`} >
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi quibusdam expedita aspernatur laboriosam iure libero molestias repellat odit sapiente maiores.
+          </p>
           <p className="price">$100.00</p>
             <ReactStars
               count={5}
@@ -65,6 +68,9 @@ function ProductCard(props) {
           <h5 className="product-title">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, nam.
           </h5>
+          <p className={`description ${grid === 12 ? "d-block" : "d-none"}`}>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi quibusdam expedita aspernatur laboriosam iure libero molestias repellat odit sapiente maiores.
+          </p>
           <p className="price">$100.00</p>
             <ReactStars
               count={5}
@@ -105,6 +111,9 @@ function ProductCard(props) {
           <h5 className="product-title">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, nam.
           </h5>
+          <p className={`description ${grid === 12 ? "d-block" : "d-none"}`}>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi quibusdam expedita aspernatur laboriosam iure libero molestias repellat odit sapiente maiores.
+          </p>
           <p className="price">$100.00</p>
             <ReactStars
               count={5}
@@ -145,6 +154,9 @@ function ProductCard(props) {
           <h5 className="product-title">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, nam.
           </h5>
+          <p className={`description ${grid === 12 ? "d-block" : "d-none"}`}>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi quibusdam expedita aspernatur laboriosam iure libero molestias repellat odit sapiente maiores.
+          </p>
           <p className="price">$100.00</p>
             <ReactStars
               count={5}

@@ -4,10 +4,12 @@ import Marquee from 'react-fast-marquee';
 import BlogCard from '../components/BlogCard';
 import ProductCard from '../components/ProductCard';
 import SpecialProduct from '../components/SpecialProduct';
+import Meta from '../components/Meta';
 
 const Home = () => {
     return (
         <>
+            <Meta title={"Blogs"} />
             <section className="home-wrapper-1 py-5">
                 <div className="container-xxl">
                     <div className="row">
@@ -17,7 +19,7 @@ const Home = () => {
                                 <div className="main-banner-content position-absolute">
                                     <h4>SUPERCHARGED FOR PROS.</h4>
                                     <h5>iPad S13+Pro</h5>
-                                    <p>From $99900 or $41.62/mo.</p>
+                                    <p>From $99 900 or $41.62/mo.</p>
                                     <Link className='button'>BUY NOW</Link>
                                 </div>
                             </div>
@@ -305,10 +307,20 @@ const Home = () => {
                         <div className="col-12">
                             <h3 className="section-heading">Our Latest Blogs</h3>
                         </div>
-                       <BlogCard />
-                       <BlogCard />
-                       <BlogCard />
-                       <BlogCard />
+                        <div className="row">
+                            <div className="col-3">
+                                <BlogCard />
+                            </div>
+                            <div className="col-3">
+                                <BlogCard />
+                            </div>
+                            <div className="col-3">
+                                <BlogCard />
+                            </div>
+                            <div className="col-3">
+                                <BlogCard />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
