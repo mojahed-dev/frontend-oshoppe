@@ -9,7 +9,7 @@ import Color from '../components/Color';
 
 function OurStore() {
     const [grid, setGrid] = useState(4);
-
+    
     return (
         <>
             <Meta title={"Our Store"} />
