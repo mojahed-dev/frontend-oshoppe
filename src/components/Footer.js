@@ -38,9 +38,11 @@ function Footer() {
                         <div className="col-4">
                             <h4 className='text-white mb-4'>Contact Us</h4>
                             <div>
-                                <address className='text-white fs-6'>9th St., Purok Madaya <br /> Rosary Heights 100, Cotabato City</address>
+                                <address className='text-white fs-6'>123 Main Street, Barangay San Antonio
+Quezon City, Metro Manila 1105
+Philippines</address>
                                 <a href="tel:+456446446544" className="mt-3 d-block mb-1 text-white">+456446446544</a>
-                                <a href="mailto:mojahed@gmail.com" className="mt-4 d-block mb-0 text-white">mojahed@gmail.com</a>
+                                <a href="mailto:mojahed@gmail.com" className="mt-4 d-block mb-0 text-white">mojahed.alo.habib@gmail.com</a>
                                 <div className="social_icons d-flex align-items-center gap-30 mt-4">
                                     <a href=""><BsLinkedin className='text-white fs-4' /></a>
                                     <a href=""><BsInstagram className='text-white fs-4' /></a>
