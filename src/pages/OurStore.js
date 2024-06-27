@@ -7,9 +7,32 @@ import ProductCard from '../components/ProductCard';
 import { useLocation } from 'react-router-dom';
 import Color from '../components/Color';
 
+
+// Custom wrapper for ReactStars
+function CustomReactStars({
+    count = 5,
+    size = 24,
+    value = 3,
+    edit = true,
+    activeColor = "#ffd700",
+    ...props
+}) {
+    return (
+        <ReactStars
+            count={count}
+            size={size}
+            value={value}
+            edit={edit}
+            activeColor={activeColor}
+            {...props}
+        />
+    );
+}
+
 function OurStore() {
     const [grid, setGrid] = useState(4);
-    
+    const [sortOption, setSortOption] = useState("best-selling"); // Initialize sortOption state
+
     return (
         <>
             <Meta title={"Our Store"} />
@@ -51,17 +74,17 @@ function OurStore() {
                                     <div className='d-flex align-items-center gap-10'>
                                         <div className="form-floating">
                                             <input type="email" className="form-control" id="floatingInput" placeholder="from" />
-                                                <label htmlFor="floatingInput">From</label>
+                                            <label htmlFor="floatingInput">From</label>
                                         </div>
                                         <div className="form-floating">
                                             <input type="email" className="form-control" id="floatingInput" placeholder="to" />
-                                                <label htmlFor="floatingInput">To</label>
+                                            <label htmlFor="floatingInput">To</label>
                                         </div>
                                     </div>
                                     <h5 className="sub-title">Colors</h5>
                                     <div>
                                         <div className="f-flex flex-wrap">
-                                           <Color />
+                                            <Color />
                                         </div>
                                     </div>
                                     <h5 className="sub-title">Size</h5>
@@ -101,54 +124,54 @@ function OurStore() {
                                 <div>
                                     <div className="random-products mb-3 d-flex">
                                         <div className="w-50">
-                                            <img src="images/watch.jpg" alt="watch" className='img-fluid'/>
+                                            <img src="images/watch.jpg" alt="watch" className='img-fluid' />
                                         </div>
                                         <div className="w-50">
                                             <h5>Lorem ipsum dolor sit amet.</h5>
-                                            <ReactStars
+                                            <CustomReactStars
                                                 count={5}
                                                 size={24}
-                                                value="3"
+                                                value={3}
                                                 edit={false}
                                                 activeColor="#ffd700"
                                             />
-                                           <b>$100.00</b>
+                                            <b>$100.00</b>
                                         </div>
                                     </div>
                                     <div className="random-products d-flex">
                                         <div className="w-50">
-                                            <img src="images/watch.jpg" alt="watch" className='img-fluid'/>
+                                            <img src="images/watch.jpg" alt="watch" className='img-fluid' />
                                         </div>
                                         <div className="w-50">
                                             <h5>Lorem ipsum dolor sit amet.</h5>
-                                            <ReactStars
+                                            <CustomReactStars
                                                 count={5}
                                                 size={24}
-                                                value="3"
+                                                value={3}
                                                 edit={false}
                                                 activeColor="#ffd700"
                                             />
-                                           <b>$100.00</b>
+                                            <b>$100.00</b>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            
+
                         </div>
-                        
+
 
                         <div className="col-9">
                             <div className="filter-sort-grid">
                                 <div className='d-flex justify-content-between align-items-center'>
                                     <div className="d-flex align-items-center gap-10">
-                                        <p className='mb-0 d-block' style={{width: "110px"}}>Sorted By</p>
-                                        <select 
-                                        name="" 
-                                        id=""
-                                        className='form-control form-select'
+                                        <p className='mb-0 d-block' style={{ width: "110px" }}>Sorted By</p>
+                                        <select
+                                            className='form-control form-select'
+                                            value={sortOption} // Use value instead of selected
+                                            onChange={(e) => setSortOption(e.target.value)} // Handle change
                                         >
-                                            <option value="best-selling" selected='selected'>Featured</option>
-                                            <option value="best-selling" selected='selected'>Best Selling</option>
+                                            <option value="featured">Featured</option>
+                                            <option value="best-selling">Best Selling</option>
                                             <option value="title-ascending">Alphabetically, A-Z</option>
                                             <option value="title-descending">Alphabetically, A-Z</option>
                                             <option value="price-ascending">Price, low to high</option>
@@ -180,9 +203,9 @@ function OurStore() {
 
                             </div>
                             <div className="product-list pb-5">
-                               <div className="d-flex gap-15 flex-wrap mt-4">
-                               <ProductCard grid={grid}/>
-                               </div>
+                                <div className="d-flex gap-15 flex-wrap mt-4">
+                                    <ProductCard grid={grid} />
+                                </div>
                             </div>
 
                         </div>
