@@ -1,6 +1,7 @@
 import React from 'react';
 import Meta from '../components/Meta';
 import BreadCrumb from '../components/BreadCrumb';
+import Container from '../components/Container';
 
 function TermsAndCondition() {
   return (
@@ -8,8 +9,7 @@ function TermsAndCondition() {
     <Meta title={"Terms and Condition"} />
     <BreadCrumb title="Terms and Condition" />
 
-    <section className="policy-wrapper py-5 home-wrapper-2">
-        <div className="container-xxl">
+    <Container class1="policy-wrapper py-5 home-wrapper-2">
             <div className="row">
                 <div className="col-12">
                     <div className="policy">
@@ -17,9 +17,7 @@ function TermsAndCondition() {
                     </div>
                 </div>
             </div>
-        </div>
-
-    </section>
+    </Container>
 </>
   )
 }

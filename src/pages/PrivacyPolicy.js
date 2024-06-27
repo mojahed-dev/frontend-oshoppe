@@ -1,6 +1,7 @@
 import React from 'react';
 import Meta from '../components/Meta';
 import BreadCrumb from '../components/BreadCrumb';
+import Container from '../components/Container';
 
 function PrivacyPolicy() {
     return (
@@ -8,8 +9,7 @@ function PrivacyPolicy() {
             <Meta title={"Privacy Policy"} />
             <BreadCrumb title="Privacy Policy" />
 
-            <section className="policy-wrapper py-5 home-wrapper-2">
-                <div className="container-xxl">
+            <Container className="policy-wrapper py-5 home-wrapper-2">
                     <div className="row">
                         <div className="col-12">
                             <div className="policy">
@@ -17,9 +17,7 @@ function PrivacyPolicy() {
                             </div>
                         </div>
                     </div>
-                </div>
-
-            </section>
+            </Container>
         </>
     )
 }

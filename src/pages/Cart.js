@@ -4,6 +4,7 @@ import BreadCrumb from '../components/BreadCrumb';
 import watchImg from '../images/watch.jpg';
 import { MdDelete } from "react-icons/md";
 import { Link } from 'react-router-dom';
+import Container from '../components/Container';
 
 function Cart() {
     return (
@@ -11,8 +12,7 @@ function Cart() {
             <Meta title={"Cart"} />
             <BreadCrumb title="Cart" />
 
-            <section className="cart-wrapper py-5 home-wrapper-2">
-                <div className="container-xxl">
+            <Container class1="cart-wrapper py-5 home-wrapper-2">
                     <div className="row">
                         <div className="col-12">
                             <div className="cart-header py-3 d-flex justify-content-between align-items-center">
@@ -100,8 +100,7 @@ function Cart() {
                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
+            </Container>
         </>
     )
 }
